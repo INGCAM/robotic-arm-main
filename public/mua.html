@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <script type="application/x-javascript">
+        addEventListener("load", function () {
+            setTimeout(hideURLbar, 0);
+        }, false);
+
+        function hideURLbar() {
+            window.scrollTo(0, 1);
+        }
+    </script>
+    <!--//for-mobile-apps-->
+
+    <title>Robotic Arm MUA</title>
+
+    <!-- Custom-Theme-Files -->
+	<!-- Bootstrap-CSS -->
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css/easy-responsive-tabs.css " />
+	<!-- Index-Page-Styling -->
+	<link rel="stylesheet" href="css/style.css" type="text/css" media="all">
+	<!-- JQuery -->
+	<script src="js/jquery.min.js"> </script>
+	<!-- Bootstrap-Main -->
+	<script src="js/bootstrap.min.js"> </script>
+	<!-- Start-Smooth-Scrolling -->
+	<script type="text/javascript" src="js/move-top.js"></script>
+	<script type="text/javascript" src="js/easing.js"></script>
+	<script type="text/javascript">
+		jQuery(document).ready(function ($) {
+			$(".scroll").click(function (event) {
+				event.preventDefault();
+				$('html,body').animate({
+					scrollTop: $(this.hash).offset().top
+				}, 2000);
+			});
+		});
+	</script>
+	<!-- //End-Smooth-Scrolling -->
+
+	<script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+	<script src="js/easyResponsiveTabs.js"></script>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="main_mru.js"></script>
+</head>
+<body>
+
+	<div class="header">
+
+		<div class="nav">
+			<nav class="navbar navbar-inverse navbar-fixed-top">
+				<div class="container">
+					<!-- Brand and toggle get grouped for better mobile display -->
+					<div class="navbar-header">
+						<button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+							data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+							<span class="sr-only">Toggle navigation</span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+						</button>
+						<a class="navbar-brand" href="#"><img src="./images/logo2.png" alt="logo"></a>
+					</div>
+
+					<!-- Collect the nav links, forms, and other content for toggling -->
+
+					<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+
+						<ul class="nav navbar-nav navbar-right">
+							<li><a href="index.html" >Inicio</a></li>
+							<li><a href="#contact" class="scroll">Contactenos</a></li>
+						</ul>
+
+					</div><!-- navbar-collapse -->
+				</div><!-- container -->
+			</nav>
+		</div> <!-- Nav Ends -->
+		
+	</div> <!-- Header Ends -->
+
+	
+	<div class="requirement" id="requirements">
+		<!-- Requirements Starts   -->
+		<div class="container">
+			<div class="all-require" style="margin-top: 150px;">
+				<div class="specification">
+					<h1 style="font-size: xx-large; color: #ffffff;">MUA</h1>
+					<div class="col-md-6 require-size" style="height: 50%; padding: 0%;">
+						<div class="grid" style="padding: 0%;">
+							<div class="newsletter">
+								<h1 style="font-size: xx-large; color: #ffffff; display: block;" id="label_ok">EL BRÁZO ESTÁ POSICIONADO</h1>
+								<div id="messages"></div>
+								<br>
+								<div >
+									<input type="button" onclick="return plusAngle(this)" value="+" id="plus">
+									<input type="number" value="0" id="angle">
+									<input type="button" onclick="return lessAngle(this)" value="-" id="less">
+
+									<input type="submit" onclick="return setArm(this)" value="Posicionar Brazo" style="display: block;" id="set-arm">
+									<input type="submit" value="Soltar esfera!" onclick="return dropBall(this)" style="display: block;;" id="drop_ball">
+								</div>
+							</div>
+							
+						</div>
+					</div>
+					<br>
+					<div class="clearfix"> </div>
+					<h1 style="font-size: xx-large; color: #ffffff;">MUA</h1>
+					<div id="chartContainer" style="height: 370px; width: 100%;"></div>
+				
+					<div class="clearfix"> </div>
+				</div> <!-- Specification Ends here   -->
+
+				
+			</div>
+		</div>
+	</div> <!-- requirement Ends -->
+
+   
+    <div class="contact" id="contact">
+		<div class="container">
+			<div class="padding-contact">
+
+				<div class="col-md-4 address">
+					<h3>Didactec</h3>
+					<address>
+						Dirección: <br>
+						Calle 123<br>
+						<span>Celular : +57 313 597 2119</span>
+					</address>
+				</div>
+
+				<div class="col-md-4 social-icons">
+					<h3>Follow Us</h3>
+					<ul class="social">
+						<li><a href="#" class="facebook" title="Go to Our Facebook Page"></a></li>
+						<li><a href="#" class="twitter" title="Go to Our Twitter Account"></a></li>
+						<li><a href="#" class="googleplus" title="Go to Our Google Plus Account"></a></li>
+						<li><a href="#" class="instagram" title="Go to Our Instagram Account"></a></li>
+						<li><a href="#" class="youtube" title="Go to Our Youtube Channel"></a></li>
+					</ul>
+				</div>
+
+				
+				<div class="clearfix"></div>
+			</div>
+		</div>
+	</div>
+
+</body>
+</html>
